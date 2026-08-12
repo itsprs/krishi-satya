@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		background-color: theme("colors.paper");
+	}
+
+	body {
+		@apply font-body text-ink;
+		background-image:
+			radial-gradient(circle at 1px 1px, rgba(36, 28, 19, 0.045) 1px, transparent 0);
+		background-size: 18px 18px;
+	}
+
+	::selection {
+		background-color: theme("colors.mustard-light");
+		color: theme("colors.ink");
+	}
+}
+
+@layer utilities {
+	.rule {
+		border-color: theme("colors.border");
+	}
+
+	.stamp-wobble {
+		filter: url(#stamp-roughen);
+	}
+}
